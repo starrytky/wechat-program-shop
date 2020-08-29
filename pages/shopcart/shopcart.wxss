@@ -1,0 +1,109 @@
+/* pages/shopcart/shopcart.wxss */
+page{
+  height: 100%;
+  background-color:#f5f5f5;
+}
+.top-box{
+  display: flex;
+  height: 80rpx;
+  line-height: 80rpx;
+  background-color: #eee;
+  padding: 0 30rpx;
+  font-size: 32rpx;
+  justify-content: space-between;
+}
+.item-list{
+  padding-bottom: 110rpx;
+}
+
+.item-list .item{
+  padding: 20rpx;
+  display: flex;
+  border-bottom: 2rpx solid #ddd;
+  background-color: #fcfcfc;
+}
+
+.item-list .item checkbox-group{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.item-list .item .pic image{
+  height: 160rpx;
+  width: 160rpx;
+  margin-left: 20rpx;
+}
+.item-list .item .content{
+  margin-left: 20rpx;
+  flex: 1
+}
+.item-list .item .content .title{
+  font-size: 32rpx;
+}
+.item-list .item .content .format{
+  font-size: 28rpx;
+  color: #999;
+}
+.item-list .item .content .price-info {
+  display: flex;
+}
+.item-list .item .content .price-info .price{
+  width: 65%;
+  font-size: 36rpx;
+}
+
+.item-list .item .content .oper {
+  display: flex;
+  border: 2rpx solid #ccc;
+  border-radius: 10rpx;
+}
+.item-list .item .content .oper .reduce,.item-list .item .content .oper .add{
+  width: 50rpx;
+  text-align: center;
+}
+.item-list .item .content .oper input{
+  width: 80rpx;
+  text-align: center;
+  border-left: 2rpx solid #ccc;
+  border-right: 2rpx solid #ccc;
+}
+
+.total-box{
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-around;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  height: 110rpx;
+  background-color: #fff;
+  z-index: 99;
+}
+.total-box .all{
+  margin-top: 8rpx;
+  font-size: 32rpx;
+  width: 200rpx;
+}
+
+.total-box .total-price{
+  width: 30%;
+}
+
+.total-box .btn{
+  width: 160rpx;
+  height: 70rpx;
+  line-height: 70rpx;
+  text-align: center;
+  border-radius: 15rpx;
+}
+
+.total-box .btn-default{
+  background-color: #eee;
+  color: #666;
+}
+.total-box .btn-primary{
+  background-color: #ff4d00;
+  color: #fff;
+}

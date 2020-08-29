@@ -1,0 +1,26 @@
+<!--pages/order/order.wxml-->
+<view class="page-box">
+	<view class="top-box">
+		<view>订单数量</view>
+		<view>取消订单</view>
+	</view>
+	<view class="items-box" >
+		<checkbox wx:for="{{orderList}}" wx:key="*this">
+			<view class="item">
+				<view class="item-img">
+					<image src="{{item.GoodsImage}}"></image>
+				</view>
+				<view class="content">
+					<view class="title">{{item.Title}}</view>
+					<view class="desc">标准: 正常</view>
+					<view class="price yellow">￥{{item.Quantity * item.SaleAmount}}</view>
+				</view>
+			</view>
+		</checkbox>
+	</view>
+	<view class="footer-box">
+		<checkbox class="check-all-box">全选</checkbox>
+		<view class="total-price ">
+			订单总价: <text class="yellow">￥1999{{}}</text></view>
+	</view>
+</view>

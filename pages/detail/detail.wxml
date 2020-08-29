@@ -1,0 +1,60 @@
+<!--pages/detail/detail.wxml-->
+<view class="page-box">
+	<!-- swiper start -->
+	<view class="swiper-box">
+		<swiper bindchange="swiperChange" indicator-dots="true" autoplay="true">
+			<block wx:for="{{detailInfo.SwiperImgList}}" wx:key="*this">
+				<swiper-item>
+					<image src="{{item}}" bindtap="showImg"></image>
+					<view class="tips">
+						<text>{{current+1}}/{{detailInfo.SwiperImgList.length}}</text>
+					</view>
+				</swiper-item>
+			</block>
+		</swiper>
+	</view>
+	<!-- swiper end -->
+	<!-- goodsInfo start -->
+	<view class="goods-info">
+		<view class="price yellow">￥{{detailInfo.SaleAmount}}</view>
+		<view class="share-box">
+			<view class="title">{{detailInfo.Title}}</view>
+			<button open-type="share" class="share">
+				<view class="iconfont icon-share"></view>
+			</button>
+		</view>
+	</view>
+	<!-- goodsInfo end -->
+	<!-- 地址 -->
+	<view class="address">
+		<view class="iconfont icon-map"></view>
+		<view>广州市越秀区</view>
+	</view>
+	<!-- 地址 end -->
+	<!-- detail start -->
+	<view class="details-box">
+		<block wx:for="{{detailInfo.DetailImgList}}" wx:key="*this">
+			<image mode="widthFiex" src="{{item}}"></image>
+		</block>
+	</view>
+	<!-- detail end -->
+	<!-- bottom start -->
+	<view class="bottom-nav">
+		<view class="small" bindtap="jumpToHome">
+		<view class="iconfont icon-home"></view>
+		<view>首页</view>
+		</view>
+		<view class="small" bindtap="onCall">
+		<view class="iconfont icon-wechat"></view>
+		<view>咨询</view>
+		</view>
+		<view class="small" bindtap="jumpToCart">
+			<view class="iconfont icon-cart"></view>
+			<view>购物车</view>
+		</view>
+		<view class="add-cart" bindtap="addToCart">加入购物车</view>
+		<view class="btn-buy" bindtap="btnBuy">立即购买</view>
+	</view>
+	<!-- bottom end -->
+
+</view>

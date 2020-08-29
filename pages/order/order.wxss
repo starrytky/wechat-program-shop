@@ -1,0 +1,87 @@
+/* pages/order/order.wxss */
+page{
+  height: 100%;
+}
+.page-box{
+  height: 100%;
+}
+.top-box{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20rpx;
+  background-color: #eee;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 32rpx;
+}
+.items-box {
+  padding-bottom: 110rpx;
+}
+
+.items-box checkbox{
+  width: 100%;
+  padding: 10rpx 20rpx;
+  box-sizing: border-box;
+  border-bottom: 2rpx solid #eee;
+}
+
+.items-box .item {
+  display: flex;
+  width: 660rpx;
+}
+
+.items-box .item .item-img{
+  margin: 0 20rpx;
+}
+
+.items-box .item .item-img image{
+  height: 200rpx;
+  width: 200rpx;
+}
+.items-box .item .content{
+  margin-left: 10rpx;
+}
+
+.items-box .item .content .title{
+  font-size: 36rpx;
+  
+ text-overflow: -o-ellipsis-lastline;
+ overflow: hidden;
+ text-overflow: ellipsis;
+ display: -webkit-box;
+ -webkit-line-clamp: 1;
+ line-clamp: 1;
+ -webkit-box-orient: vertical;
+}
+.items-box .item .content .desc{
+  font-size: 28rpx;
+  color: #999;
+  margin-top: 6rpx;
+}
+.items-box .item .content .price{
+  font-size: 42rpx;
+  margin-top: 20rpx;
+}
+
+.footer-box{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20rpx;
+  align-items: center;
+  width: 100%;
+  height: 100rpx;
+  border-top: 2rpx solid #ccc;
+  box-sizing: border-box;
+  z-index: 99;
+  background-color: #fff;
+}
+
+.footer-box .check-all-box{
+  font-size: 38rpx;
+}
+.footer-box .total-price{
+  width: 50%;
+}

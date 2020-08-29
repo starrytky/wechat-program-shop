@@ -1,0 +1,58 @@
+<!--pages/home/home.wxml-->
+<view class="page-box">
+	<!-- swiper start -->
+	<view class="swiper-box">
+		<swiper indicator-dots="true" autoplay="true">
+			<swiper-item>
+				<image src="/images/banner-01.jpg"></image>
+			</swiper-item>
+			<swiper-item>
+				<image src="/images/banner-02.jpg"></image>
+			</swiper-item>
+		</swiper>
+	</view>
+	<!-- swiper end -->
+
+	<!-- nav start -->
+	<view class="nav-box">
+		<scroll-view scroll-x="{{true}}">
+			<view class="nav">
+				<view class="item current">全部</view>
+				<view class="item">狗粮</view>
+				<view class="item">猫粮</view>
+				<view class="item">零食</view>
+				<view class="item">玩具</view>
+				<view class="item">工具</view>
+				<view class="item">清理</view>
+				<view class="item">清理</view>
+				<view class="item">清理</view>
+				<view class="item">清理</view>
+				<view class="item">其他</view>
+				<view class="item">其他</view>
+				<view class="item">其他</view>
+				<view class="item">其他</view>
+			</view>
+		</scroll-view>
+	</view>
+	<!-- nav end -->
+
+	<!-- shopList start -->
+	<view class="goods-list">
+		<view class="item" wx:for="{{goodsData}}"  wx:key="*this" data-goodsid="{{item.GoodsNo}}" bindtap="jumpDetail">
+			<view class="pic">
+				<image src="{{item.GoodsImage}}"></image>
+			</view>
+			<view class="content">
+				<view class="title">{{item.Title}}</view>
+				<view class="desc">{{item.Brand}}</view>
+				<view class="price yellow">￥{{item.SaleAmount}}</view>
+			</view>
+		</view>
+		<!-- buttom tip start -->
+		<view class="tip" wx:if="{{isComplete}}">没有更多了</view>
+		<!-- buttom tip end -->
+	</view>
+	<!-- shopList end -->
+
+
+</view>
